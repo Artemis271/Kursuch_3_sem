@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fav.png">
+    <title>Магазин вещей</title>
+    <link rel="stylesheet" href="style_newForm.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Оставьте отзыв</h2>
+    <form method="post" name="submit-to-google-sheet">
+
+        <div class="wrapper">
+          <div class="box">
+            <input type="text" name="Имя" id="fname" required>
+            <label for="fname">Имя</label>
+          </div>
+
+          <div class="box">
+            <input type="text" name="Фамилия" id="lname" required>
+            <label for="lname">Фамилия</label>
+          </div>
+        </div>
+
+          <div class="wrapper">
+            <div class="box">
+              <input type="email" name="Email" id="email" required>
+              <label for="email">Электронная почта</label>
+            </div>
+
+            <div class="box">
+              <input type="text" name="Телефон" id="tel" required>
+              <label for="tel">Телефон</label>
+            </div>
+
+          </div>
+
+            <div class="wrapper">
+              <div class="box">
+                <textarea   name="Отзыв" id="mes" required></textarea>
+                <label for="mes">Ваше сообщение…</
+              </div>
+            </div>
+
+        <button type="submit" name="submit" value="Отправить">Отправить</button>
+
+  </form>
+</div>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby37kGqPZtR37L64QteoKAhjktoWky6rvq-31NaWHAPA8TqspuemmL_i9vU4kVhdU1x/exec';
+  const form = document.forms['submit-to-google-sheet'];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        console.log('Success!', response);
+        alert('Отзыв отправлен');
+        window.location.href = 'index.html';
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        alert('Произошла ошибка при отправке отзыва');
+      });
+  });
+
+  // Добавим обработчик для немедленной отправки формы при клике на кнопку
+  const submitButton = document.querySelector('button[type="submit"]');
+  submitButton.addEventListener('click', () => {
+    form.submit();
+  });
+</script>
+
+
+</body>
+
+
+
+</html>
