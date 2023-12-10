@@ -60,12 +60,10 @@ section{
 }
 
 /* header */
-
 .header img{
   height: 70px;
   width: 70px;
 }
-
 .header{
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -77,28 +75,23 @@ section{
   justify-content: space-between;
   padding: 2rem 9%;
 }
-
 .header .logo{
   font-size: 2.5rem;
   font-weight: bolder;
   color: var(--black);
 }
-
 .header .logo i{
   color: var(--primary);
   padding-right: .5rem;
 }
-
 .header .navbar a{
   font-size: 1.7rem;
   color: var(--black);
   margin: 0 1rem;
 }
-
 .header .navbar a:hover{
   color: var(--primary);
 }
-
 .header .icons div{
   font-size: 2.5rem;
   margin-left: 1.7rem;
@@ -106,15 +99,12 @@ section{
   cursor: pointer;
   -webkit-text-stroke: .1rem var(--primary);
 }
-
 .header .icons div:hover{
   color: var(--primary);
 }
-
 #menu-bar{
   display: none;
 }
-
 /* end */
 
 /* home */
@@ -246,33 +236,26 @@ section{
 .footer{
   background: var(--bg);
 }
-
 .footer .box-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2rem;
 }
-
 .footer .box-container .box h3{
   font-size: 2.2rem;
   color: var(--light-black);
   padding: 1rem 0;
 }
-
 .footer .box-container .box h3 i{
   color: var(--primary);
   padding-right: .5rem;
 }
-
 .footer .box-container .box p{
   font-size: 1.5rem;
   color: var(--light-black);
   padding: 1rem 0;
   line-height: 2;
 }
-
-
-
 .footer .box-container .box .link{
   display: block;
   font-size: 1.7rem;
@@ -280,16 +263,13 @@ section{
   padding: .5rem 0;
   color: var(--light-black);
 }
-
 .footer .box-container .box .link:hover{
   color: var(--primary);
 }
-
 .footer .box-container .box .link i{
   padding-right: .5rem;
   color: var(--primary);
 }
-
 .footer .credit{
   margin-top: 2.5rem;
   padding: 1rem;

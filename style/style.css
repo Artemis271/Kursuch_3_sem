@@ -44,17 +44,6 @@ img{
   margin-top: 25px;
 }
 
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100px;
-    color: #333;
-    padding: 0 40px;
-    box-shadow: 0px 4px 21px -1px rgba(34, 60, 80, 0.23);
-    background-color: transparent;
-}
-
 .nav a{
     color: #333;
     text-decoration: none;
